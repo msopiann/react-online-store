@@ -60,15 +60,29 @@ export default function Navbar() {
       </ul>
 
       <div className="nav-right text-xl space-x-3">
-        {navIcons.map((items) => (
-          <a
-            href={items.href}
-            key={items.id}
-            className="transition-all hover:text-blue-500 md:hidden"
-          >
-            <i className={items.name}></i>
-          </a>
-        ))}
+        {navIcons.map((item) => {
+          if (item.id === "3") {
+            return (
+              <a
+                href={item.href}
+                key={item.id}
+                className="hidden transition-all hover:text-blue-500"
+              >
+                <i className={item.name}></i>
+              </a>
+            );
+          }
+          return (
+            <a
+              href={item.href}
+              key={item.id}
+              className="transition-all hover:text-blue-500"
+            >
+              <i className={item.name}></i>
+            </a>
+          );
+        })}
+
         <div
           onClick={toggleNav}
           className={
