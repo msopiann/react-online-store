@@ -76,7 +76,7 @@ export default function Navbar() {
             <a
               href={item.href}
               key={item.id}
-              className="transition-all hover:text-blue-500"
+              className="md:hidden transition-all hover:text-blue-500"
             >
               <i className={item.name}></i>
             </a>
