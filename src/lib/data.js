@@ -4,6 +4,11 @@ import prada from "/img/prada.webp";
 import gucci from "/img/gucci.webp";
 import calvinklein from "/img/calvinklein.webp";
 
+// collection image
+import shoesCollection from "/img/shoesCollection.webp";
+import jumpersCollection from "/img/jumperCollection.webp";
+import jeansCollection from "/img/jeanCollection.webp";
+
 export const navData = [
   {
     id: "1",
@@ -74,5 +79,23 @@ export const brandLogo = [
     id: "4",
     name: "Calvin Klein brand",
     image: calvinklein,
+  },
+];
+
+export const collectionProduct = [
+  {
+    id: "1",
+    name: "Casual Trainers",
+    img: shoesCollection,
+  },
+  {
+    id: "2",
+    name: "Winters Jumpers",
+    img: jumpersCollection,
+  },
+  {
+    id: "3",
+    name: "Skinny Jeans Blue",
+    img: jeansCollection,
   },
 ];
