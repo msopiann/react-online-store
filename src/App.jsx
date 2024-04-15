@@ -1,4 +1,5 @@
 import Brand from "./components/Brand";
+import CallAction from "./components/CallAction";
 import Collection from "./components/Collection";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -12,6 +13,7 @@ function App() {
       <Brand />
       <Collection />
       <ProductList />
+      <CallAction />
     </>
   );
 }
