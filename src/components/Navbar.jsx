@@ -29,17 +29,34 @@ export default function Navbar() {
         Waryan
       </a>
 
-      <ul className="navlist hidden md:flex space-x-2 md:space-x-4">
-        {navData.map((items) => (
-          <li key={items.id} className="hover:-translate-y-1 transition-all">
-            <a
-              href={items.url}
-              className="transition-all font-semibold hover:underline hover:text-blue-500"
-            >
-              {items.title}
-            </a>
-          </li>
-        ))}
+      <ul className="hidden md:flex space-x-2 md:space-x-4">
+        {navData.map((item) => {
+          if (item.id === "6") {
+            return (
+              <li
+                key={item.id}
+                className="md:hidden hover:-translate-y-1 transition-all"
+              >
+                <a
+                  href={item.url}
+                  className="transition-all font-semibold hover:underline hover:text-blue-500"
+                >
+                  {item.title}
+                </a>
+              </li>
+            );
+          }
+          return (
+            <li key={item.id} className="hover:-translate-y-1 transition-all">
+              <a
+                href={item.url}
+                className="transition-all font-semibold hover:underline hover:text-blue-500"
+              >
+                {item.title}
+              </a>
+            </li>
+          );
+        })}
       </ul>
 
       <div className="nav-right text-xl space-x-3">
@@ -47,7 +64,7 @@ export default function Navbar() {
           <a
             href={items.href}
             key={items.id}
-            className="transition-all hover:text-blue-500"
+            className="transition-all hover:text-blue-500 md:hidden"
           >
             <i className={items.name}></i>
           </a>
@@ -60,6 +77,13 @@ export default function Navbar() {
               : "ri-menu-line inline-flex transition-all hover:text-blue-500 md:hidden"
           }
         ></div>
+
+        <a
+          href="#"
+          className="hidden md:block px-4 py-1 border border-solid border-black bg-transparent uppercase text-p-size font-bold transition-all hover:-translate-y-2 hover:underline hover:text-blue-500"
+        >
+          login
+        </a>
       </div>
 
       <ul

@@ -49,6 +49,11 @@ export const navData = [
     title: "Contact",
     url: "#",
   },
+  {
+    id: "6",
+    title: "Login",
+    url: "#",
+  },
 ];
 
 export const navIcons = [
